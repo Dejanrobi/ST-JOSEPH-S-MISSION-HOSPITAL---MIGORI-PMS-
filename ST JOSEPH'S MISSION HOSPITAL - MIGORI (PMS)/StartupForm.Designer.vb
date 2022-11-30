@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class tartupForm
+Partial Class StartupForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -106,7 +106,7 @@ Partial Class tartupForm
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 50
         '
-        'tartupForm
+        'StartupForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -118,7 +118,7 @@ Partial Class tartupForm
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Pbar)
-        Me.Name = "tartupForm"
+        Me.Name = "StartupForm"
         Me.Text = "StartupForm"
         Me.ResumeLayout(False)
         Me.PerformLayout()

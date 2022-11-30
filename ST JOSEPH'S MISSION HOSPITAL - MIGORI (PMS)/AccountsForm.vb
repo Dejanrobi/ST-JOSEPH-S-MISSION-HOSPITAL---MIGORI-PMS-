@@ -52,7 +52,7 @@ Public Class AccountsForm
     End Sub
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
-        SystemSections.Show()
+        AccountantSections.Show()
         Me.Hide()
     End Sub
 
@@ -120,7 +120,9 @@ Public Class AccountsForm
 
 
 
-    Private Sub PatientTotalCost_Enter(sender As Object, e As EventArgs) Handles PatientTotalCost.Enter
+
+
+    Private Sub PatientTotalCost_KeyPress(sender As Object, e As KeyPressEventArgs) Handles PatientTotalCost.KeyPress
         Dim a, b As Integer
         a = Val(PatientTotalCost.Text)
         b = Val(PatientAmountPaid.Text)
@@ -128,7 +130,7 @@ Public Class AccountsForm
         PatientBalance.Text = a - b
     End Sub
 
-    Private Sub PatientAmountPaid_Enter(sender As Object, e As EventArgs) Handles PatientAmountPaid.Enter
+    Private Sub PatientAmountPaid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles PatientAmountPaid.KeyPress
         Dim a, b As Integer
         a = Val(PatientTotalCost.Text)
         b = Val(PatientAmountPaid.Text)

@@ -211,7 +211,7 @@ Public Class PatientRegistrationForm
     End Sub
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
-        SystemSections.Show()
+        FrontDeskSection.Show()
         Me.Hide()
     End Sub
 

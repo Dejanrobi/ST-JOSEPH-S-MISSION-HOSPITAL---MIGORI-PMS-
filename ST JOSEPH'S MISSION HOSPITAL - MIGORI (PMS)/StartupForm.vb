@@ -1,4 +1,4 @@
-﻿Public Class tartupForm
+﻿Public Class StartupForm
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Me.Pbar.Value = Pbar.Value + 1
         If Pbar.Value >= 100 Then

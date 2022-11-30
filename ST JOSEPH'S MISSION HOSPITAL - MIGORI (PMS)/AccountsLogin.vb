@@ -36,7 +36,7 @@ Public Class AccountsLogin
         sqlConn.Close()
 
         If (sqlDt.Rows.Count > 0) Then
-            AccountsForm.Show()
+            AccountantSections.Show()
             Me.Hide()
             MessageBox.Show("Login Successfull", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
