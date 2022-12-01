@@ -30,4 +30,8 @@
         RegisterStaff.Show()
         Me.Hide()
     End Sub
+
+    Private Sub AdminSection_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
 End Class

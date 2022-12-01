@@ -51,6 +51,7 @@ Public Class FrontEndDeskRegistrationForm
 
     Private Sub FrontEndDeskRegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub AddRecordButton_Click(sender As Object, e As EventArgs) Handles AddRecordButton.Click
@@ -163,5 +164,23 @@ Public Class FrontEndDeskRegistrationForm
 
     Private Sub ResetFormButton_Click(sender As Object, e As EventArgs) Handles ResetFormButton.Click
         resetTable()
+    End Sub
+
+    Private Sub SearchNurseID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SearchStaffID.KeyPress
+        Try
+            If Asc(e.KeyChar) = 13 Then
+                Dim dv As DataView
+                dv = sqlDt.DefaultView
+                dv.RowFilter = String.Format("   Convert(front_desk_id, 'System.String') like '%" & SearchStaffID.Text & "%'")
+                FrontDeskInformationReport.DataSource = dv.ToTable
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        With sqlCmd
+            .Parameters.Clear()
+        End With
     End Sub
 End Class

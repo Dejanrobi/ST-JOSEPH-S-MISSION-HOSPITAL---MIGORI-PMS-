@@ -8,7 +8,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub AssignDoctorsAndNursesButton_Click(sender As Object, e As EventArgs) Handles AssignDoctorsAndNursesButton.Click
+    Private Sub AssignDoctorsAndNursesButton_Click(sender As Object, e As EventArgs)
         BedAndWardAllocationForm.Show()
         Me.Hide()
     End Sub
@@ -41,5 +41,9 @@
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         NurseEmergencyAllocations.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub NurseSection_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 End Class

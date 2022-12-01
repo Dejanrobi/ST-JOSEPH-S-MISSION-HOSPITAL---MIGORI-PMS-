@@ -98,6 +98,8 @@ Public Class AllocatePatientsWithDoctorsAndNurses
         updateTable()
         fillDoctorIDCombobox()
         fillNurseIDCombobox()
+
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs)

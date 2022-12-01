@@ -93,6 +93,8 @@ Public Class AssignEmergencies
         updateTable()
         fillDoctorIDCombobox()
         fillNurseIDCombobox()
+
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NurseId.SelectedIndexChanged

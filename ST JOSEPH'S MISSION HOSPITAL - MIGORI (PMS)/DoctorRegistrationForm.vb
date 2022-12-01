@@ -47,6 +47,7 @@ Public Class DoctorRegistrationForm
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub AddRecordButton_Click(sender As Object, e As EventArgs) Handles AddRecordButton.Click
@@ -168,5 +169,23 @@ Public Class DoctorRegistrationForm
 
     Private Sub DoctorsInformationReport_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DoctorsInformationReport.CellContentClick
 
+    End Sub
+
+    Private Sub SearchDoctorID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SearchDoctorID.KeyPress
+        Try
+            If Asc(e.KeyChar) = 13 Then
+                Dim dv As DataView
+                dv = sqlDt.DefaultView
+                dv.RowFilter = String.Format("   Convert(doctor_id, 'System.String') like '%" & SearchDoctorID.Text & "%'")
+                DoctorsInformationReport.DataSource = dv.ToTable
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        With sqlCmd
+            .Parameters.Clear()
+        End With
     End Sub
 End Class

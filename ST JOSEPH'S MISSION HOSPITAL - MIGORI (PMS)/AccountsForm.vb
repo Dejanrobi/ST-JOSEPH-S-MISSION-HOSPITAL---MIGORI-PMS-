@@ -68,6 +68,7 @@ Public Class AccountsForm
 
     Private Sub AccountsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub PatientAccountsInformationReport_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles PatientAccountsInformationReport.CellClick
@@ -136,5 +137,23 @@ Public Class AccountsForm
         b = Val(PatientAmountPaid.Text)
 
         PatientBalance.Text = a - b
+    End Sub
+
+    Private Sub SearchPatientByID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SearchPatientByID.KeyPress
+        Try
+            If Asc(e.KeyChar) = 13 Then
+                Dim dv As DataView
+                dv = sqlDt.DefaultView
+                dv.RowFilter = String.Format("   Convert(patient_id, 'System.String') like '%" & SearchPatientByID.Text & "%'")
+                PatientAccountsInformationReport.DataSource = dv.ToTable
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        With sqlCmd
+            .Parameters.Clear()
+        End With
     End Sub
 End Class

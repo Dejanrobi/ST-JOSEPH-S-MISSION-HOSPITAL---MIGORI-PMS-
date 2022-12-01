@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Microsoft.VisualBasic.ApplicationServices
 Imports Microsoft.Win32
+Imports Google.Protobuf.WellKnownTypes
 
 Public Class PatientRegistrationForm
 
@@ -68,6 +69,7 @@ Public Class PatientRegistrationForm
 
     Private Sub PatientRegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub AddRecordButton_Click(sender As Object, e As EventArgs) Handles AddRecordButton.Click
@@ -187,7 +189,7 @@ Public Class PatientRegistrationForm
             If Asc(e.KeyChar) = 13 Then
                 Dim dv As DataView
                 dv = sqlDt.DefaultView
-                dv.RowFilter = String.Format("first_name like '%{0}'", searchPatientTextBox.Text)
+                dv.RowFilter = String.Format("   Convert(patient_id, 'System.String') like '%" & searchPatientTextBox.Text & "%'")
                 PatientInformationReport.DataSource = dv.ToTable
             End If
 
@@ -220,6 +222,23 @@ Public Class PatientRegistrationForm
     End Sub
 
     Private Sub PatientInformationReport_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles PatientInformationReport.CellContentClick
+
+    End Sub
+
+    Private Sub SearchTextBoxButton_Click(sender As Object, e As EventArgs)
+        sqlConn.ConnectionString = "server  = " + server + ";" + "user id=" + username + ";" +
+           "password  = " + password + ";" + "database =" + database
+
+        sqlConn.Open()
+        sqlCmd.Connection = sqlConn
+        sqlCmd.CommandText = "SELECT patient_id,first_name, last_name, dob, gender, home_address, dor, situation From st_josephs_mission_hospital_prms.patient_information where CONCAT(patient_id) like '%" & searchPatientTextBox.Text & "%'"
+
+        sqlRd = sqlCmd.ExecuteReader
+        sqlDt.Load(sqlRd)
+        sqlRd.Close()
+        sqlConn.Close()
+        PatientInformationReport.DataSource = sqlDt
+
 
     End Sub
 End Class

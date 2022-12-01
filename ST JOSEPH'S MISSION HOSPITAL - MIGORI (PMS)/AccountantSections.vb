@@ -13,4 +13,8 @@
         SystemSections.Show()
         Me.Hide()
     End Sub
+
+    Private Sub AccountantSections_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
 End Class

@@ -132,6 +132,7 @@ Public Class BedAndWardAllocationForm
         updateTable()
         fillWardNoCombobox()
         fillBedNoCombobox()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
 
@@ -173,5 +174,23 @@ Public Class BedAndWardAllocationForm
         If iExit = DialogResult.Yes Then
             Application.Exit()
         End If
+    End Sub
+
+    Private Sub SearchPatientByID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SearchPatientByID.KeyPress
+        Try
+            If Asc(e.KeyChar) = 13 Then
+                Dim dv As DataView
+                dv = sqlDt.DefaultView
+                dv.RowFilter = String.Format("   Convert(patient_id, 'System.String') like '%" & SearchPatientByID.Text & "%'")
+                BedAndWardAllocationInformationReport.DataSource = dv.ToTable
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        With sqlCmd
+            .Parameters.Clear()
+        End With
     End Sub
 End Class

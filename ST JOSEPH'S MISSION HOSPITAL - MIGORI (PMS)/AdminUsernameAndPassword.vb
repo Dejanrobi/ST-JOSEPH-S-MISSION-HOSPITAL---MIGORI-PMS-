@@ -16,7 +16,7 @@ Public Class AdminSectionUsernameAndPassword
     Dim password As String = "7944@dejanROBI"
     Dim database As String = "st_josephs_mission_hospital_prms"
     Private Sub EnterUsernameAndPassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click

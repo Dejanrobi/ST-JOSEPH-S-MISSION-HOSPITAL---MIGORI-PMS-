@@ -52,6 +52,6 @@ Public Class FrontEndDeskLogin
     End Sub
 
     Private Sub FrontEndDeskLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 End Class

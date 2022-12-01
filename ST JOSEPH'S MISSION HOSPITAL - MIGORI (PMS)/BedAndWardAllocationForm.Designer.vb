@@ -37,6 +37,8 @@ Partial Class BedAndWardAllocationForm
         Me.BedNO = New System.Windows.Forms.ComboBox()
         Me.BackButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
+        Me.SearchPatientByID = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.BedAndWardAllocationInformationReport, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -173,11 +175,29 @@ Partial Class BedAndWardAllocationForm
         Me.ExitButton.Text = "EXIT"
         Me.ExitButton.UseVisualStyleBackColor = False
         '
+        'SearchPatientByID
+        '
+        Me.SearchPatientByID.Location = New System.Drawing.Point(531, 46)
+        Me.SearchPatientByID.Name = "SearchPatientByID"
+        Me.SearchPatientByID.Size = New System.Drawing.Size(175, 23)
+        Me.SearchPatientByID.TabIndex = 69
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(382, 49)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(134, 15)
+        Me.Label7.TabIndex = 68
+        Me.Label7.Text = "SEARCH PATIENT BY ID :"
+        '
         'BedAndWardAllocationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1321, 572)
+        Me.Controls.Add(Me.SearchPatientByID)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.BedNO)
@@ -215,4 +235,6 @@ Partial Class BedAndWardAllocationForm
     Friend WithEvents BedNO As ComboBox
     Friend WithEvents BackButton As Button
     Friend WithEvents ExitButton As Button
+    Friend WithEvents SearchPatientByID As TextBox
+    Friend WithEvents Label7 As Label
 End Class

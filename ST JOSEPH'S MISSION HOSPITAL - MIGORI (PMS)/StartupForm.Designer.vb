@@ -35,7 +35,7 @@ Partial Class StartupForm
         '
         'Pbar
         '
-        Me.Pbar.Location = New System.Drawing.Point(342, 325)
+        Me.Pbar.Location = New System.Drawing.Point(315, 331)
         Me.Pbar.Name = "Pbar"
         Me.Pbar.Size = New System.Drawing.Size(657, 16)
         Me.Pbar.Style = System.Windows.Forms.ProgressBarStyle.Continuous
@@ -44,28 +44,28 @@ Partial Class StartupForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(295, 90)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(182, 91)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(777, 40)
+        Me.Label1.Size = New System.Drawing.Size(958, 45)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Welcome To St. Joseph Mission Hospital -Migori (Prms)"
+        Me.Label1.Text = "WELCOME TO ST. JOSEPH MISSION HOSPITAL-MIGOR (PRMS)"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(578, 194)
+        Me.Label2.Location = New System.Drawing.Point(547, 199)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(171, 20)
+        Me.Label2.Size = New System.Drawing.Size(234, 20)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "System Loading..................."
+        Me.Label2.Text = "SYSTEM LOADING..................................."
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(310, 499)
+        Me.Label3.Location = New System.Drawing.Point(315, 499)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(200, 17)
         Me.Label3.TabIndex = 3
@@ -75,7 +75,7 @@ Partial Class StartupForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(310, 547)
+        Me.Label4.Location = New System.Drawing.Point(315, 547)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(91, 17)
         Me.Label4.TabIndex = 4
@@ -85,7 +85,7 @@ Partial Class StartupForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(532, 499)
+        Me.Label5.Location = New System.Drawing.Point(537, 499)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(131, 17)
         Me.Label5.TabIndex = 5
@@ -95,7 +95,7 @@ Partial Class StartupForm
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(532, 547)
+        Me.Label6.Location = New System.Drawing.Point(537, 547)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(139, 17)
         Me.Label6.TabIndex = 6

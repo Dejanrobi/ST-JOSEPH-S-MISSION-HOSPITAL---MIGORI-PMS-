@@ -43,6 +43,8 @@ Partial Class FrontEndDeskRegistrationForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.SearchStaffID = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.FrontDeskInformationReport, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -230,11 +232,29 @@ Partial Class FrontEndDeskRegistrationForm
         Me.Label1.TabIndex = 82
         Me.Label1.Text = "ID NO : "
         '
+        'SearchStaffID
+        '
+        Me.SearchStaffID.Location = New System.Drawing.Point(492, 46)
+        Me.SearchStaffID.Name = "SearchStaffID"
+        Me.SearchStaffID.Size = New System.Drawing.Size(175, 23)
+        Me.SearchStaffID.TabIndex = 104
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(343, 49)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(119, 15)
+        Me.Label8.TabIndex = 103
+        Me.Label8.Text = "SEARCH STAFF BY ID:"
+        '
         'FrontEndDeskRegistrationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1292, 627)
+        Me.Controls.Add(Me.SearchStaffID)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.FrontDeskInformationReport)
@@ -285,4 +305,6 @@ Partial Class FrontEndDeskRegistrationForm
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents SearchStaffID As TextBox
+    Friend WithEvents Label8 As Label
 End Class

@@ -24,7 +24,6 @@ Partial Class NurseSection
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.AssignSurgeriesButton = New System.Windows.Forms.Button()
-        Me.AssignDoctorsAndNursesButton = New System.Windows.Forms.Button()
         Me.BackButton = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -49,22 +48,12 @@ Partial Class NurseSection
         'AssignSurgeriesButton
         '
         Me.AssignSurgeriesButton.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.AssignSurgeriesButton.Location = New System.Drawing.Point(218, 320)
+        Me.AssignSurgeriesButton.Location = New System.Drawing.Point(191, 240)
         Me.AssignSurgeriesButton.Name = "AssignSurgeriesButton"
         Me.AssignSurgeriesButton.Size = New System.Drawing.Size(258, 40)
         Me.AssignSurgeriesButton.TabIndex = 14
         Me.AssignSurgeriesButton.Text = "RECORD PATIENT PROGRESS"
         Me.AssignSurgeriesButton.UseVisualStyleBackColor = True
-        '
-        'AssignDoctorsAndNursesButton
-        '
-        Me.AssignDoctorsAndNursesButton.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.AssignDoctorsAndNursesButton.Location = New System.Drawing.Point(218, 247)
-        Me.AssignDoctorsAndNursesButton.Name = "AssignDoctorsAndNursesButton"
-        Me.AssignDoctorsAndNursesButton.Size = New System.Drawing.Size(258, 40)
-        Me.AssignDoctorsAndNursesButton.TabIndex = 12
-        Me.AssignDoctorsAndNursesButton.Text = "ASSIGN WARDS/BEDS"
-        Me.AssignDoctorsAndNursesButton.UseVisualStyleBackColor = True
         '
         'BackButton
         '
@@ -168,7 +157,6 @@ Partial Class NurseSection
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.AssignSurgeriesButton)
-        Me.Controls.Add(Me.AssignDoctorsAndNursesButton)
         Me.Name = "NurseSection"
         Me.Text = "NurseSection"
         Me.ResumeLayout(False)
@@ -178,7 +166,6 @@ Partial Class NurseSection
 
     Friend WithEvents Label1 As Label
     Friend WithEvents AssignSurgeriesButton As Button
-    Friend WithEvents AssignDoctorsAndNursesButton As Button
     Friend WithEvents BackButton As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label2 As Label

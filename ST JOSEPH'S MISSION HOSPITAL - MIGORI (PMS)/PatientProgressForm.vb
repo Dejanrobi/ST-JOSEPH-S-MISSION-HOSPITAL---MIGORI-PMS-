@@ -44,6 +44,7 @@ Public Class PatientProgressForm
     End Sub
     Private Sub PatientProgressForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub ResetFormButton_Click(sender As Object, e As EventArgs) Handles ResetFormButton.Click
@@ -55,7 +56,7 @@ Public Class PatientProgressForm
             If Asc(e.KeyChar) = 13 Then
                 Dim dv As DataView
                 dv = sqlDt.DefaultView
-                dv.RowFilter = String.Format("first_name like '%{0}'", SearchPatientProgress.Text)
+                dv.RowFilter = String.Format("   Convert(patient_id, 'System.String') like '%" & SearchPatientProgress.Text & "%'")
                 PatientProgressInformationReport.DataSource = dv.ToTable
             End If
 

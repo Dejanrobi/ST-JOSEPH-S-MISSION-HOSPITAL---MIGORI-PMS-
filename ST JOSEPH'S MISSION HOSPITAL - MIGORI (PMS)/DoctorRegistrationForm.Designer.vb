@@ -44,6 +44,8 @@ Partial Class DoctorRegistrationForm
         Me.DoctorsInformationReport = New System.Windows.Forms.DataGridView()
         Me.BackButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
+        Me.SearchDoctorID = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DoctorsInformationReport, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -237,11 +239,29 @@ Partial Class DoctorRegistrationForm
         Me.ExitButton.Text = "EXIT"
         Me.ExitButton.UseVisualStyleBackColor = False
         '
+        'SearchDoctorID
+        '
+        Me.SearchDoctorID.Location = New System.Drawing.Point(493, 35)
+        Me.SearchDoctorID.Name = "SearchDoctorID"
+        Me.SearchDoctorID.Size = New System.Drawing.Size(175, 23)
+        Me.SearchDoctorID.TabIndex = 106
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(344, 38)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(134, 15)
+        Me.Label8.TabIndex = 105
+        Me.Label8.Text = "SEARCH DOCTOR BY ID:"
+        '
         'DoctorRegistrationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1300, 591)
+        Me.Controls.Add(Me.SearchDoctorID)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.DoctorsInformationReport)
@@ -294,4 +314,6 @@ Partial Class DoctorRegistrationForm
     Friend WithEvents DoctorsInformationReport As DataGridView
     Friend WithEvents BackButton As Button
     Friend WithEvents ExitButton As Button
+    Friend WithEvents SearchDoctorID As TextBox
+    Friend WithEvents Label8 As Label
 End Class

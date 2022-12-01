@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class NurseRegistrationForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class NurseRegistrationForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.NurseDOB = New System.Windows.Forms.DateTimePicker()
         Me.NurseDOR = New System.Windows.Forms.DateTimePicker()
@@ -43,6 +43,9 @@ Partial Class NurseRegistrationForm
         Me.NursesInformation = New System.Windows.Forms.DataGridView()
         Me.BackButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.SearchNurseID = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.NursesInformation, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -230,11 +233,37 @@ Partial Class NurseRegistrationForm
         Me.ExitButton.Text = "EXIT"
         Me.ExitButton.UseVisualStyleBackColor = False
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(567, 275)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(165, 23)
+        Me.TextBox1.TabIndex = 81
+        '
+        'SearchNurseID
+        '
+        Me.SearchNurseID.Location = New System.Drawing.Point(508, 41)
+        Me.SearchNurseID.Name = "SearchNurseID"
+        Me.SearchNurseID.Size = New System.Drawing.Size(175, 23)
+        Me.SearchNurseID.TabIndex = 83
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(359, 44)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(124, 15)
+        Me.Label8.TabIndex = 82
+        Me.Label8.Text = "SEARCH NURSE BY ID:"
+        '
         'NurseRegistrationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1299, 573)
+        Me.Controls.Add(Me.SearchNurseID)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.NursesInformation)
@@ -285,4 +314,7 @@ Partial Class NurseRegistrationForm
     Friend WithEvents NursesInformation As DataGridView
     Friend WithEvents BackButton As Button
     Friend WithEvents ExitButton As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents SearchNurseID As TextBox
+    Friend WithEvents Label8 As Label
 End Class

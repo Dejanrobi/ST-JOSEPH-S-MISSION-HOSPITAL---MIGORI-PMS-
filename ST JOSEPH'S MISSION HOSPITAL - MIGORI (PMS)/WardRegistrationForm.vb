@@ -49,6 +49,7 @@ Public Class WardRegistrationForm
 
     Private Sub WardRegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub UpdateWardButton_Click(sender As Object, e As EventArgs) Handles UpdateWardButton.Click

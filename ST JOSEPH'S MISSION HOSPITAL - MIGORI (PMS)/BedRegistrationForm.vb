@@ -70,6 +70,7 @@ Public Class BedRegistrationForm
     Private Sub BedRegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
         fillWardNoCombobox()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub AddBedButton_Click(sender As Object, e As EventArgs) Handles AddBedButton.Click

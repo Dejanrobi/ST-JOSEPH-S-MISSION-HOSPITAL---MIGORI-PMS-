@@ -31,6 +31,7 @@ Public Class PatientDiagnosisReport
     End Sub
     Private Sub PatientDiagnosisReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
@@ -64,5 +65,23 @@ Public Class PatientDiagnosisReport
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub SearchPatientsID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SearchPatientsID.KeyPress
+        Try
+            If Asc(e.KeyChar) = 13 Then
+                Dim dv As DataView
+                dv = sqlDt.DefaultView
+                dv.RowFilter = String.Format("   Convert(patient_id, 'System.String') like '%" & SearchPatientsID.Text & "%'")
+                PatientDiagnosisFinal.DataSource = dv.ToTable
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        With sqlCmd
+            .Parameters.Clear()
+        End With
     End Sub
 End Class

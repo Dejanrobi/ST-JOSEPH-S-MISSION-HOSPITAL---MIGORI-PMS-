@@ -67,6 +67,7 @@ Public Class DiagnosisForm
 
     Private Sub DiagnosisForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles PatientDiagnosisInformationReport.CellContentClick
@@ -78,7 +79,7 @@ Public Class DiagnosisForm
             If Asc(e.KeyChar) = 13 Then
                 Dim dv As DataView
                 dv = sqlDt.DefaultView
-                dv.RowFilter = String.Format("first_name like '%{0}'", SearchPatient.Text)
+                dv.RowFilter = String.Format("   Convert(patient_id, 'System.String') like '%" & SearchPatient.Text & "%'")
                 PatientDiagnosisInformationReport.DataSource = dv.ToTable
             End If
 

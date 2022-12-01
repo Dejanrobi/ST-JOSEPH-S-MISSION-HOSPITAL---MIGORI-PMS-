@@ -63,6 +63,7 @@ Public Class CheckoutPatient
 
     Private Sub CheckoutPatient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
+        Me.WindowState = FormWindowState.Maximized
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TotalBill.TextChanged
@@ -92,13 +93,11 @@ Public Class CheckoutPatient
     Private Sub SearchPatientBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles SearchPatientBox.KeyPress
         Try
             If Asc(e.KeyChar) = 13 Then
-
+                Dim dv As DataView
                 dv = sqlDt.DefaultView
-                dv.RowFilter = String.Format("first_name like '%{0}'", SearchPatientBox.Text)
+                dv.RowFilter = String.Format("   Convert(patient_id, 'System.String') like '%" & SearchPatientBox.Text & "%'")
                 PatientClearanceData.DataSource = dv.ToTable
             End If
-
-
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)

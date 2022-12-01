@@ -47,5 +47,24 @@ Public Class NurseSurgeryAllocations
 
     Private Sub NurseSurgeryAllocations_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub DoctorsID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles DoctorsID.KeyPress
+        Try
+            If Asc(e.KeyChar) = 13 Then
+                Dim dv As DataView
+                dv = sqlDt.DefaultView
+                dv.RowFilter = String.Format("   Convert(nurse_id, 'System.String') like '%" & DoctorsID.Text & "%'")
+                AllocatedSurgeryReport.DataSource = dv.ToTable
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        With sqlCmd
+            .Parameters.Clear()
+        End With
     End Sub
 End Class
